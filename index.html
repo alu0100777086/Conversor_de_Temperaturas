@@ -2,25 +2,38 @@
   <head>
       <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
       <title>JavaScript Temperature Converter</title>
+      <link href="bootstrap.min.css" rel="stylesheet" type="text/css">
       <link href="global.css" rel="stylesheet" type="text/css">
 
      <script type="text/javascript" src="temperature.js"></script>
   </head>
-  <body>
-    <h1>Temperature Converter</h1>
+  <body background="fondo.jpg">
+      <h1>Temperature Converter</h1>
+      <br><br><br><br><br><br><br><br>
     <table>
       <tr>
-        <th>Enter  Temperature (examples: 32F, 45C, -2.5f):</th>
+        <th>Enter  Temperature (examples: 32F, 45C, -2.5f)</th>
       </tr>
       <tr>
         <th><input id="original" onchange="calculate();"></th>
-      </tr>     
+      </tr>
       <tr>
-        <th>Converted Temperature:</th>
+        <th>Converted Temperature</th>
       </tr>
       <tr>
         <th><span class="output" id="converted"></span></th>
       </tr>
     </table>
+    <div style="position: absolute; top: 10px; left: 10px; padding: 15px;">
+      <td>
+        <a href="https://github.com/MauricioMCavalleriS/Conversor_de_Temperaturas" class="btn btn-primary" role="button">repositorio</a>
+      </td>
+      <td>
+        <a href="http://mauriciomcavalleris.github.io" class="btn btn-primary" role="button">github-page de usuario</a>
+      </td>
+      <td>
+        <a href="tests/index.html" class="btn btn-primary" role="button">tests</a>
+      </td>
+    </div>
   </body>
 </html>

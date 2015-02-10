@@ -1,27 +1,29 @@
-[~/srcPLgrado/temperature(master)]$ cat global.css 
+[~/srcPLgrado/temperature(master)]$ cat global.css
      /* Don't center table cells  */
 
-#converted  {  
-	font-weight: bold; 
-	font-size:large;          
+#converted  {
+	font-weight: bold;
+	font-size:large;
 }     /* Calculated values in bold */
 
 span {
 	color: #F94F52;
+	font-size:250%;
 }
 
-input { 
+input {
 	text-align: center;       /* Align input to the right  */
-	border: none; 
+	border: none;
 	border-radius: 5px 5px 5px 5px;
 	padding: 5px  5px;
-	font-size:large; 
+	color: #373737;
+	font-size:150%;
 	font-family: "Lucida Sans Typewriter", "Lucida Console", Monaco, "Bitstream Vera Sans Mono", monospace;
 }
 
 body {
 	text-align: center;
- 	background-color: #191918/*#b0c4de*/;  /* blue */
+ 	background-color: #191918;  /* blue */
  	font-size:large;
  	font-family: "Lucida Sans Typewriter", "Lucida Console", Monaco, "Bitstream Vera Sans Mono", monospace;
 }
@@ -31,20 +33,20 @@ table {
  	margin: auto;
 }
 
-th, td      { 
-	vertical-align: top; 
-	text-align: center; 
-	font-size:large;
-	color: #7A7A7A; 
+th, td      {
+	vertical-align: top;
+	text-align: center;
+	font-size:150%;
+	color: #F1F1F1;
 	padding: 15px  15px;
 }
 
 h1 {
     	font-weight: normal;
     	font-family: "Helvetica", cursive;
-    	background: #3F7742 /*#3C5681*/;
+    	background: #3F7742;
     	padding: 5px 15px;
-    	color: #CECECE;
+    	color: #F1F1F1;
     	display:inline-block;
     	border-radius: 5px 5px 5px 5px;
 }
