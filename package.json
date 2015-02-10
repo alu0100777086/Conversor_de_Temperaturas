@@ -1,0 +1,27 @@
+{
+  "name": "Conversor_de_Temperaturas",
+  "version": "1.0.0",
+  "description": "Aplicacion para pasar de celcius a farenheit",
+  "main": "temperature.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/MauricioMCavalleriS/Conversor_de_Temperaturas.git"
+  },
+  "keywords": [
+    "temperature",
+    "celcius",
+    "farenheit"
+  ],
+  "author": "Mauricio Manuel Cavalleri Sergent",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MauricioMCavalleriS/Conversor_de_Temperaturas/issues"
+  },
+  "homepage": "https://github.com/MauricioMCavalleriS/Conversor_de_Temperaturas"
+}
