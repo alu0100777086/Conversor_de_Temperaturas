@@ -4,10 +4,10 @@ function calculate() {
   var result;
   var original       = document.getElementById("original");
   var temp = original.value;
-  var regexp = /^\s*([-+]?\d+(?:\.\d+)?(?:e[+-]?\d+)?)\s*([cf])\s*$/i;
-  
+  var regexp = /^\s*([-+]?\d+(?:\.\d+)?º?(?:e[+-]?\d+)?)\s*([cf])\s*$/i;
+
   var m = temp.match(regexp);
-  
+
   if (m) {
     var num = m[1];
     var type = m[2];
