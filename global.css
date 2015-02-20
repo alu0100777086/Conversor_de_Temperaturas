@@ -1,15 +1,32 @@
 [~/srcPLgrado/temperature(master)]$ cat global.css
      /* Don't center table cells  */
 
-#converted  {
+#converted1, #converted2  {
+	/*font-weight: bold;
+	font-size:large;*/
+
 	font-weight: bold;
-	font-size:large;
+	font-size: medium;
+	height:10%;
 }     /* Calculated values in bold */
 
 span {
 	color: #F94F52;
-	font-size:250%;
+	font-size:200%;
 }
+
+span[temp="cold"] {
+	color: #729DC8;
+}
+
+span[temp="warm"] {
+	color: #5CBA0F;
+}
+
+span[temp="hot"] {
+	color: #bA1124;
+}
+
 
 input {
 	text-align: center;       /* Align input to the right  */
@@ -36,17 +53,17 @@ table {
 th, td      {
 	vertical-align: top;
 	text-align: center;
-	font-size:150%;
+	font-size:large;
 	color: #F1F1F1;
-	padding: 15px  15px;
+	padding: 25px  25px;
 }
 
 h1 {
-    	font-weight: normal;
-    	font-family: "Helvetica", cursive;
-    	background: #3F7742;
-    	padding: 5px 15px;
-    	color: #F1F1F1;
-    	display:inline-block;
-    	border-radius: 5px 5px 5px 5px;
+	font-weight: large;
+	font-size: 3em;
+	font-family: "Georgia", bold;
+	margin: 5%;
+	color: #CECECE;
+	display:inline-block;
+	border-radius: 5px 5px 5px 5px;
 }

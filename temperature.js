@@ -1,28 +1,60 @@
 "use strict"; // Use ECMAScript 5 strict mode in browsers that support it
 //expesion regular: /^\s*([-+]?\d+(?:\.\d+)?(?:[eE][+-]?\d+)?)\s*([cCfF])\s*$/
 function calculate() {
-  var result;
-  var original       = document.getElementById("original");
-  var temp = original.value;
-  var regexp = /^\s*([-+]?\d+(?:\.\d+)?º?(?:e[+-]?\d+)?)\s*([cf])\s*$/i;
+   var result;
+   var result2;
+   var celtemp;
+   var original       = document.getElementById("original");
+   var temp = original.value;
+   var regexp = /^\s*([-+]?\d+(?:\.\d+)?(?:e[+-]?\d+)?)\s*º?([CcFfKk])\s*$/i;
 
-  var m = temp.match(regexp);
+   var m = temp.match(regexp);
 
-  if (m) {
-    var num = m[1];
-    var type = m[2];
-    num = parseFloat(num);
-    if (type == 'c' || type == 'C') {
-      result = (num * 9/5)+32;
-      result = result.toFixed(1)+" Farenheit"
-    }
-    else {
-      result = (num - 32)*5/9;
-      result = result.toFixed(1)+" Celsius"
-    }
-    converted.innerHTML = result;
-  }
-  else {
-    converted.innerHTML = "ERROR! Try something like '-4.2C' instead";
-  }
+   if (m) {
+      var num = m[1];
+      var type = m[2];
+      num = parseFloat(num);
+      if (type == 'c' || type == 'C') {
+         result = (num * 9/5) + 32;
+         result = result.toFixed(2) + " Fahrenheit"
+
+         result2 = num + 273.15
+         result2 = result2.toFixed(2) + " Kelvin"
+         celtemp = num;
+      }
+      else if (type == 'f' || type == 'F') {
+         result = (num - 32) * 5/9;
+         celtemp = result;
+         result2 = result + 273.15;
+
+         result = result.toFixed(2) + " Celsius"
+         result2 = result2.toFixed(2) + " Kelvin"
+      } else {
+         result2 = (num - 273.15) * 1.8 + 32;
+         result = num - 273.15;
+         celtemp = result;
+
+         result = result.toFixed(2) + " Celsius"
+         result2 = result2.toFixed(2) + " Fahrenheit"
+      }
+
+      //Cambia el color del output según la temperatura:
+      if (celtemp < 0) {
+         document.getElementById("converted1").setAttribute("temp", "cold");
+         document.getElementById("converted2").setAttribute("temp", "cold");
+      }   else if (celtemp > 40) {
+         document.getElementById("converted1").setAttribute("temp", "hot");
+         document.getElementById("converted2").setAttribute("temp", "hot");
+      } else {
+         document.getElementById("converted1").setAttribute("temp", "warm");
+         document.getElementById("converted2").setAttribute("temp", "warm");
+      }
+
+      converted1.innerHTML = result;
+      converted2.innerHTML = result2;
+   }
+   else {
+      converted1.innerHTML = "ERROR! Utilice el formato: 32f, -15.4ºC, 12K, etc.";
+      converted2.innerHTML = "";
+   }
 }
