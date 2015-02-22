@@ -1,0 +1,10 @@
+#converted2,[~/srcPLgrado/temperature(master)]$ cat global.css #converted1{font-weight:700;font-size:medium;height:10%}
+span{color:#F94F52;font-size:200%}
+span[temp=cold]{color:#729DC8}
+span[temp=warm]{color:#5CBA0F}
+span[temp=hot]{color:#bA1124}
+input{text-align:center;border:none;border-radius:5px;padding:5px;color:#373737;font-size:150%;font-family:"Lucida Sans Typewriter","Lucida Console",Monaco,"Bitstream Vera Sans Mono",monospace}
+body{text-align:center;background-color:#191918;font-size:large;font-family:"Lucida Sans Typewriter","Lucida Console",Monaco,"Bitstream Vera Sans Mono",monospace}
+table{width:75%;margin:auto}
+td,th{vertical-align:top;text-align:center;font-size:large;color:#F1F1F1;padding:25px}
+h1{font-weight:large;font-size:3em;font-family:Georgia,bold;margin:5%;color:#CECECE;display:inline-block;border-radius:5px}
