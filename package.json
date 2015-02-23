@@ -32,6 +32,11 @@
     "gulp-minify-html": "^1.0.0",
     "gulp-uglify": "^1.1.0",
     "gulp-util": "^3.0.3",
-    "mocha": "latest"
+    "karma": "^0.12.31",
+    "karma-chrome-launcher": "^0.1.7",
+    "karma-firefox-launcher": "^0.1.4",
+    "karma-html2js-preprocessor": "^0.1.0",
+    "karma-mocha": "^0.1.10",
+    "mocha": "^2.1.0"
   }
 }
