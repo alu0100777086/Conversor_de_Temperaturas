@@ -1,6 +1,5 @@
 #ignorar nodemodules
 node_modules/
-test/node_modules/
 
 # Windows image file caches
 Thumbs.db
