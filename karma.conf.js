@@ -2,7 +2,7 @@
 // Generated on Thu Jan 29 2015 16:51:38 GMT+0000 (WET)
 
 module.exports = function(config) {
-  config.set({
+  var configuration = {
 
     // base path, that will be used to resolve files and exclude
     basePath: '',
@@ -68,8 +68,17 @@ module.exports = function(config) {
     // - IE (only Windows; has to be installed with `npm install karma-ie-launcher`)
     browsers: [
                'Chrome',
-               'Firefox'
+               'Firefox',
+               'ChromeCanary'
                ],
+
+
+   customLaunchers: {
+     Chrome_travis_ci: {
+       base: 'Chrome',
+       flags: ['--no-sandbox']
+     }
+   },
 
 
     // If browser does not capture in given timeout [ms], kill it
@@ -79,5 +88,12 @@ module.exports = function(config) {
     // Continuous Integration mode
     // if true, it capture browsers, run tests and exit
     singleRun: false
-  });
+  };
+
+  if(process.env.TRAVIS){
+    configuration.browsers = ['Chrome_travis_ci'];
+   }
+
+   config.set(configuration);
+
 };
