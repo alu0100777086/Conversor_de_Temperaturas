@@ -91,7 +91,7 @@ module.exports = function(config) {
   };
 
   if(process.env.TRAVIS){
-    configuration.browsers = ['Firefox', 'Chrome_travis_ci'];
+    configuration.browsers = ['PhantomJS', 'Firefox', 'Chrome_travis_ci'];
    }
 
    config.set(configuration);
