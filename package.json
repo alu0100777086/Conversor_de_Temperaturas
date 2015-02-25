@@ -7,7 +7,7 @@
     "test": "tests"
   },
   "scripts": {
-    "test": "karma start karma.conf.js --single-run",
+    "test": "./node_modules/karma/bin/karma start karma.conf.js --single-run",
     "testf": "open index.html",
     "chai": "curl https://raw.githubusercontent.com/chaijs/chai/master/chai.js -o tests/node_modules/chai/chai.js",
     "sinon": "curl http://sinonjs.org/releases/sinon-1.12.2.js -o vendor/sinon-1.12.2.js",
