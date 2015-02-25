@@ -8,7 +8,7 @@ module.exports = function(config) {
     basePath: '',
 
     // frameworks to use
-    frameworks: ['mocha'],
+    frameworks: ['mocha', 'chai'],
 
     client: {
           mocha: {
@@ -23,6 +23,7 @@ module.exports = function(config) {
 
     // list of files / patterns to load in the browser
     files: [
+      'tests/index.html',
       '*.js',
       'tests/*.js'
     ],
@@ -30,7 +31,8 @@ module.exports = function(config) {
 
     // list of files to exclude
     exclude: [
-      'gulpfile.js'
+      'gulpfile.js',
+      'server.js'
     ],
 
 
@@ -66,8 +68,7 @@ module.exports = function(config) {
     // - IE (only Windows; has to be installed with `npm install karma-ie-launcher`)
     browsers: [
                'Chrome',
-               'Firefox',
-               'PhantomJS',
+               'Firefox'
                ],
 
 
